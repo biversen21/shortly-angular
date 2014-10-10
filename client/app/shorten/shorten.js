@@ -5,6 +5,7 @@ angular.module('shortly.shorten', [])
   $scope.link = {};
 
   $scope.addLink = function($location){
-    Links.addLink($location);
+    console.log('adding link:', $location);
+    Links.addLink({url: $location});
   }
 });

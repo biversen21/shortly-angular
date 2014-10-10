@@ -22,7 +22,7 @@ angular.module('shortly.services', [])
       url: '/api/links',
       data: location
     }).then(function(resp){
-      return resp.data;
+      return resp;
     });
   }
 
