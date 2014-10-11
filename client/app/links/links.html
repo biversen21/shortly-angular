@@ -1,5 +1,11 @@
 <div id='container' ng-controller='LinksController'>
   <ul>
-    <li ng-repeat="link in data.links">{{ link.title }}</li>
+    <li ng-repeat="link in data.links">
+      {{ link.title }}
+      <a href="{{ link.code }}">Shorty Code: {{link.code}}</a>
+      <span>Visits: {{link.visits}}</span>
+    </li>
+
   </ul>
+  <a href='#/shorten' >Add new Link</a>
 </div>
