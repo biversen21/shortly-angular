@@ -1,8 +1,9 @@
 <div id='container' ng-controller='LinksController'>
+  <input ng-model='search.title' />
   <ul>
-    <li ng-repeat="link in data.links">
+    <li ng-repeat="link in data.links | filter:search">
       {{ link.title }}
-      <a href="{{ link.code }}">Shorty Code: {{link.code}}</a>
+      <a href="api/links/{{ link.code }}">Shorty Code: {{link.code}}</a>
       <span>Visits: {{link.visits}}</span>
     </li>
 
